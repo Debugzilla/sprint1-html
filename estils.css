@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     max-width: 1200px;
+    box-sizing: border-box;
 }
 
 header {
@@ -10,15 +11,11 @@ header {
     padding: 20px;
     margin: 10px;
     border: 20px solid black;
+    box-sizing: border-box;
 
 }
 
-main.container {
-    max-width: 1200px;
-    display: flex;
-    width: 100%;
-   
-}
+
 
 .encabezado {
     display: flex;
@@ -26,6 +23,7 @@ main.container {
     align-items: center;
     max-width: 1200px;
     margin: 10;
+    box-sizing: border-box;
 }
 
 .nav, .social, .logo {
@@ -36,14 +34,17 @@ main.container {
 
 .nav {
     flex: 0.2;
+    box-sizing: border-box;
 }
 
 .social {
     flex: 0.4;
+    box-sizing: border-box;
 }
 
 .logo {
     flex: 0.2;
+    box-sizing: border-box;
 }
 
 
@@ -53,6 +54,7 @@ main.container {
     margin: 10px;
     border: 20px solid black;
     margin-top: -20px;
+    box-sizing: border-box;
 }
 
 
@@ -61,6 +63,7 @@ h1 {
     padding: 18px;
     flex: 2;
     margin: 10px;
+    box-sizing: border-box;
 
 }
 
@@ -70,6 +73,7 @@ h1 {
     justify-content: center;
     max-width: 1200px;
     margin: 20px auto;
+    box-sizing: border-box;
 }
 
 
@@ -83,12 +87,14 @@ h1 {
     padding: 21px;
     margin: 10px;
     border: 20px solid;
+    box-sizing: border-box;
     
 }
 
 .article {
     background-color: lightcoral;
     padding: 20px;
+    box-sizing: border-box;
     
 }
 
@@ -97,6 +103,7 @@ h1 {
     background-color:yellowgreen;
     padding: 20px;
     grid-column: 1 / -1;
+    box-sizing: border-box;
     
    
     
@@ -112,6 +119,7 @@ h1 {
     background-color: cadetblue;
     border: 20px solid;
     margin-left: -20px;
+    box-sizing: border-box;
 }
 
 .publicidad {
@@ -121,6 +129,7 @@ h1 {
     margin-bottom: 10px;
     margin: 20px;
     margin-bottom: -13px;
+    box-sizing: border-box;
 }
 
 
@@ -129,11 +138,88 @@ footer {
     padding: 20px;
     margin-top: 20px;
     margin: 10px;
+    box-sizing: border-box;
     
 }
 
 .pie {
     background-color: beige;
     padding: 10px;
+    box-sizing: border-box;
 }
 
+
+
+@media (max-width: 1024px) and ( min-width: 600px) {
+
+
+    .encabezado {
+        display: flex;
+        margin: 0;
+        gap: 24px;
+        flex-direction: column;
+        
+
+    }
+ 
+
+    header {
+        padding: 15px;
+        width: 95%;
+        
+    }
+
+    .nav, .social, .logo {
+        padding: 15px;
+        width: 100%;
+            
+        
+    }
+
+    .container {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        flex-direction: column;
+     
+    }
+
+    .banner {
+        width: 95%;
+    }
+
+    /* Ajustes para artículos en una sola columna con el mismo tamaño */
+    .articulos {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 25px;
+    }
+
+    .article {
+        padding: 10px;
+        width: 100%;
+        height: 89%;
+        
+    }
+
+    .publi {
+        width: 95%;
+        order: 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: 10px;
+        padding: 13px;
+    }
+
+    .publicidad {
+        padding: 15px;
+        margin: 10px;
+       
+    }
+
+    footer {
+        padding: 15px;
+        width: 95%;
+    }
+}
